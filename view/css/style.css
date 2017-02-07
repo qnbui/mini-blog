@@ -1,0 +1,35 @@
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.header {
+    background-color: #fd6e05;
+    color: white;
+}
+
+#write {
+    background-color: #fd6e05;
+    color: white;
+    padding: 20px;
+}
+
+#title {}
+
+#des {
+    padding: 20px;
+    border-left: 5px solid #fd6e05;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
