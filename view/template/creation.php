@@ -11,8 +11,9 @@ Blog simple<a href="">hello</a>
 <h4>title</h4>
 <form action="../controller/creation.php" method="POST">
 <input type="text" name="title" class="form-control" placeholder="entrer un titre">
-
+<br>
 <br/>
+<input type="text" name="nick" class="form-control" placeholder="entrer un pseudo">
 <br/>
 <h4>description</h4>
 <textarea name="description" class="form-control" style="height: 270px;" placeholder="entrer un contenu">
@@ -27,4 +28,4 @@ Blog simple<a href="">hello</a>
 </div>
 
 
-<?php include'../controller/php/creation/creation.php';
+<?php include'../../controller/php/creation.php';
