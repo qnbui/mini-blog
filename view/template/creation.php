@@ -1,7 +1,7 @@
 
 <div class="text-center">
 
-simple blog system - <a href="http://www.fundsmaker.com">Naveens lab</a>
+Blog simple<a href="">hello</a>
 
 </div>
 
@@ -24,3 +24,5 @@ simple blog system - <a href="http://www.fundsmaker.com">Naveens lab</a>
 </form>
 </div>
 </div>
+
+<?php include'../controller/php/creation/creation.php';>
