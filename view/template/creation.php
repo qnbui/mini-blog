@@ -7,8 +7,9 @@ Blog simple<a href="">hello</a>
 
 <div class="col-sm-12 text-left">
 
+
 <h4>title</h4>
-<form action="write.php" method="POST">
+<form action="../controller/creation.php" method="POST">
 <input type="text" name="title" class="form-control" placeholder="entrer un titre">
 
 <br/>
@@ -25,4 +26,5 @@ Blog simple<a href="">hello</a>
 </div>
 </div>
 
-<?php include'../controller/php/creation/creation.php';>
+
+<?php include'../controller/php/creation/creation.php';
