@@ -1,19 +1,30 @@
 <?php
 include 'PDO.php';
 
-if (isset($_POST['title']) && isset($_POST['description']) && isset($_POST['description'])) {
+	if(isset($_POST["submit"])){
 
-	if (!empty($_POST['title']) && !empty($_POST['description'])) {
-$nick = $_POST['nick'];
-$title = $_POST['title'];
-$description  = $_POST['description'];
-//making a database connection
+		try {
 
-$sql = "INSERT INTO title`, `pseudo`,`contenu` VALUES ('$title', '$nick', '$description')";
+			$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			$sql =  "INSERT INTO Articles(`titre`, `contenu`)
+			VALUES ('".$_POST["title"]."','".$_POST["description"]."');
+			INSERT INTO Auteurs(`pseudo`)
+			VALUES ('".$_POST["nick"]."');
+			INSERT INTO Articles(`themes`)
+			VALUES ('".$_POST["theme"]."');"
+			;
+		if ($dbh->query($sql)) {
+			echo "<script type= 'text/javascript'>alert('New Record Inserted Successfully');</script>";
+			}
+		else{
+			echo "<script type= 'text/javascript'>alert('Data not successfully Inserted.');</script>";
+			}
 
-//send a query to database to store the data
+			$dbh = null;
+			}
+			catch(PDOException $e)
+			{
+			echo $e->getMessage();
+			}
 
-$query = mysqli_query($dbh,$sql);
-
-	}
-}
+		}
