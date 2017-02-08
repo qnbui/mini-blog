@@ -10,11 +10,11 @@ include 'PDO.php';
 			VALUES ('".$_POST["title"]."','".$_POST["description"]."');
 			INSERT INTO Auteurs(`pseudo`)
 			VALUES ('".$_POST["nick"]."');
-			INSERT INTO Articles(`themes`)
+			INSERT INTO Categories(`themes`)
 			VALUES ('".$_POST["theme"]."');"
 			;
 		if ($dbh->query($sql)) {
-			echo "<script type= 'text/javascript'>alert('New Record Inserted Successfully');</script>";
+			echo "<script type= 'text/javascrispt'>alert('New Record Inserted Successfully');</script>";
 			}
 		else{
 			echo "<script type= 'text/javascript'>alert('Data not successfully Inserted.');</script>";
@@ -26,5 +26,5 @@ include 'PDO.php';
 			{
 			echo $e->getMessage();
 			}
-
+header('Location: ../../index.php');
 		}

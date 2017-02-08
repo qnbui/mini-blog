@@ -8,8 +8,10 @@ Blog simple<a href="">hello</a>
 <div class="col-sm-12 text-left">
 
 
-
-<br/>
+<h4>titre</h4>
+<form action="../../controller/php/creation.php" method="POST">
+<input type="text" name="title" class="form-control" placeholder="entrer un titre">
+<br>
 <h4>pseudo</h4>
 <input type="text" name="nick" class="form-control" placeholder="entrer un pseudo">
 <br/>
@@ -17,14 +19,10 @@ Blog simple<a href="">hello</a>
 <h4>Thème</h4>
 <input type="text" name="theme" class="form-control" placeholder="mettre un theme">
 <br/>
-<h4>titre</h4>
-<form action="../../controller/php/creation.php" method="POST">
-<input type="text" name="title" class="form-control" placeholder="entrer un titre">
-<br>
 <h4>description</h4>
 <textarea name="description" class="form-control" style="height: 270px;" placeholder="entrer un contenu">
-
 </textarea>
+<br/>
 <br/>
 <br/>
 <div class="text-center">
@@ -32,6 +30,3 @@ Blog simple<a href="">hello</a>
 </form>
 </div>
 </div>
-
-
-<?php include'../../controller/php/creation.php';
